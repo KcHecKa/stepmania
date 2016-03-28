@@ -523,7 +523,7 @@ void NoteDataUtil::LoadTransformedSlidingWindow( const NoteData &in, NoteData &o
 		if( iMeasure != iLastMeasure )
 			++iMeasuresSinceChange;
 
-		if( iMeasure != iLastMeasure && iMeasuresSinceChange >= 4 ) // adjust sliding window every 4 measures at most
+		if( iMeasure != iLastMeasure && iMeasuresSinceChange >= 0.25 ) // adjust sliding window every 4 measures at most
 		{
 			// See if there is a hold crossing the beginning of this measure
 			bool bHoldCrossesThisMeasure = false;
